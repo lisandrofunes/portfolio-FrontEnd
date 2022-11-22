@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.light-theme{
+    --main: #2da379;
+    --main2: #297762;
+    --image: url(./assets/image-light.png);
+    --image-about: url(./assets/about-light.svg);
+    --color1: #2da379;
+    --color2: #022f42;
+    --color3: #fff;
+    --switch: #022f42;
+    --text: #212529;
+    --background1: #e6e6e6; 
+    --background2: #f5f5f5;
+    --shadow1: #c5c5c5;
+    --shadow2: var(--color3);
+    --card: rgba(245, 245, 245, 0.5);
+}
+
+.dark-theme{
+    --main: #297762;
+    --main2: #2da379;
+    --image: url(./assets/image-dark.png);
+    --image-about: url(./assets/about-dark.svg);
+    --color1: #022f42;
+    --color2: #2da379;
+    --color3: #262626;
+    --switch: #002636;
+    --text: #dedad6;
+    --background1: #191919;   
+    --background2: #0a0a0a;
+    --shadow1: var(--background2);
+    --shadow2: var(--color3);
+    --card: rgba(38, 38, 38, 0.5);
+}
+
+body::-webkit-scrollbar{
+	width: 8px;
+	background-color: #424242;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #686868;
+    border-radius: 4px;
+}

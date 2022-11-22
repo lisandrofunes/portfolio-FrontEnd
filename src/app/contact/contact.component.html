@@ -1,0 +1,22 @@
+<section id="contact" class="section_contact">
+
+    <div class="container">
+
+      <div class="title_contact"><h3>{{'contact.title' | translate }}</h3></div>
+
+      <form action="https://formspree.io/f/mzbwopea" method="POST" class="form">
+
+        <input type="text" name="name" class="form-control" placeholder="{{'contact.name' | translate }}">
+        
+        <input type="email" name="email" class="form-control" placeholder="{{'contact.email' | translate }}" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">{{'contact.alert' | translate }}</div>
+        
+        <input type="text" name="subject" class="form-control" placeholder="{{'contact.subject' | translate }}">
+        
+        <textarea name="message" class="form-control message" placeholder="{{'contact.message' | translate }}" rows="4"></textarea>
+
+        <button type="submit" class="btn btn-primary">{{'contact.buttom' | translate }}</button>
+      </form>
+            
+    </div>
+  </section>

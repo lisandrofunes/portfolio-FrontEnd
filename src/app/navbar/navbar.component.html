@@ -1,0 +1,49 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+      <a class="navbar-brand" href="#">Lisandro Funes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">{{'navbar.home' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">{{'navbar.about' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">{{'navbar.portfolio' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">{{'navbar.contact' | translate }}</a>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav mx-right">
+          <li class="nav-item">
+
+            <a class="nav-link">
+              <label class="switch toggle">
+                <input id="checktheme" type="checkbox">
+                <span class="slider" (click)="switchTheme()"></span>
+              </label>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-translate"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" (click)="switchLang('en')">English</button></li>
+              <li><button class="dropdown-item" (click)="switchLang('es')">Español</button></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,45 @@
+.section_about{
+    background: var(--background2);
+    padding: 4em 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.picture{
+    width: 30%;
+}
+
+.description{
+    width: 50%;
+    color: var(--text);
+    text-align: justify;
+}
+
+.pic{
+    content: var(--image-about)
+}
+
+.title_about{
+    color: var(--color2);
+    padding: 0;
+}
+
+@media (max-width: 992px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .picture{
+        width: 80%;
+        margin: 1em 0;
+    }
+
+    .description{
+        width: 80%;
+        text-align: left;
+    }
+}

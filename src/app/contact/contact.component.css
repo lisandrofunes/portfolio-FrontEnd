@@ -1,0 +1,80 @@
+.section_contact{
+    background-color: var(--background1);
+    padding: 4em 0;
+}
+
+.title_contact{
+    color: var(--color2);
+    padding: 0;
+    margin-bottom: .5em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.btn{
+    width: 50%;
+    background-color: var(--main);
+    font-size: 1.1em;
+    border: none;
+    padding: 0.5rem 3rem;
+    margin: 1.5em 0;
+    border-radius: 15px;
+}
+
+.btn:hover{
+    background-color: var(--main2) !important;
+}
+
+.form-control {
+    color: var(--text);
+    border: none;
+    border-radius: 15px;
+    margin-top: 1.5em;
+    padding: 15px;
+    background-color: var(--background1);
+    box-shadow: 6px 6px 12px var(--shadow2), -6px -6px 12px var(--shadow1);
+}
+   
+.message{
+    resize: none;
+}
+
+.message::-webkit-scrollbar{
+	width: 8px;
+	background-color: var(--shadow1);
+	border-radius: 4px;
+}
+
+.message::-webkit-scrollbar-thumb {
+    background: var(--main);
+    border-radius: 4px;
+}
+
+
+.form-control:focus {
+    outline-color: white;
+    place-content: "Enter your message!";
+}
+
+.form-text{
+    margin: 0 0 -16px 5px;
+    align-self: flex-start;
+}
+
+@media (max-width: 992px) {
+    .form{
+        width: 90%;
+    }
+}
+
