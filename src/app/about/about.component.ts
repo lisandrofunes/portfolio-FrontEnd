@@ -12,4 +12,24 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollR(){
+    const productContainers = Array.from(document.querySelectorAll('.skill-container'));
+  
+    productContainers.forEach((item, i)=>{
+      let containerDimensions = item.getBoundingClientRect();
+      let containerWidth = containerDimensions.width;
+      item.scrollLeft += containerWidth;
+    })
+  }
+
+  scrollL(){
+    const productContainers = Array.from(document.querySelectorAll('.skill-container'));
+  
+    productContainers.forEach((item, i)=>{
+      let containerDimensions = item.getBoundingClientRect();
+      let containerWidth = containerDimensions.width;
+      item.scrollLeft -= containerWidth;
+    })
+  }
+
 }

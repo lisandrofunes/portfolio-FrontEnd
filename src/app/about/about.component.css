@@ -1,4 +1,4 @@
-.section_about{
+.container-bg{
     background: var(--background2);
     padding: 4em 0;
 }
@@ -9,24 +9,101 @@
     justify-content: space-around;
 }
 
-.picture{
-    width: 30%;
+.title_about{
+    color: var(--color2);
+    padding: 0;
 }
 
-.description{
-    width: 50%;
-    color: var(--text);
-    text-align: justify;
+.picture{
+    width: 30%;
 }
 
 .pic{
     content: var(--image-about)
 }
 
-.title_about{
-    color: var(--color2);
-    padding: 0;
+.description{
+    width: 50%;
+    color: var(--text);
+    text-align: justify;
+    position: relative;
 }
+
+
+.skill-container {
+    padding: 2em 1em;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.skill-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item-card {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 120px;
+    margin: 0 1em 0 0;
+    border-radius: 20px;
+    background-color: var(--card);
+    box-shadow: #00000024 0px 0px 10px 0px;
+}
+
+.item-card:last-child{
+    margin: 0;
+}
+
+.item-image{
+    font-size: 50px;
+}
+
+.description-card {
+    color: var(--text);
+    width: 100%;
+    padding-top: 10px;
+}
+
+.title-card{
+    margin: 0;
+    text-align: center;
+}
+
+.pre-btn, .nxt-btn {
+    position: absolute;
+    border: none;
+    background: #ffffff00;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn{
+    left: -50px;
+    bottom: 11%;
+}
+  
+.nxt-btn {
+    right: -50px;
+    bottom: 11%;
+    transform: rotate(180deg);
+}
+  
+.pre-btn img, .nxt-btn img {
+    background-color: #585858;
+    padding: 10px;
+    border-radius: 20px;
+    opacity: 0.4;
+}
+  
+.pre-btn:hover img, .nxt-btn:hover img {
+    opacity: 0.8;
+}
+
 
 @media (max-width: 992px) {
     .container{
@@ -41,5 +118,19 @@
     .description{
         width: 80%;
         text-align: left;
+    }
+
+    .item-card{
+        width: 49%;
+    }
+
+    .pre-btn{
+        left: -25px;
+        bottom: 85px;
+    }
+      
+    .nxt-btn {
+        right: -25px;
+        bottom: 85px;
     }
 }
