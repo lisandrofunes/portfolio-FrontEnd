@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container-bg">
+    <div class="container">
+        <h2 class="title_skills">Editar Portafolio</h2>
+        <table class="table table-dark table-striped ">
+            <thead>
+                <tr>
+                    <!-- <th scope="col">ID</th> -->
+                    <th id="proyecto-column" scope="col">Proyecto</th>
+                    <th id="descripcion-column" scope="col">Descripción</th>
+                    <th id="habilidades-column" scope="col">Habilidades</th>
+                    <th id="opciones-column" scope="col">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let portfolio of lista">
+                    <!-- <td>{{skill.id}}</td> -->
+                    <td>{{portfolio.title}}</td>
+                    <td>{{portfolio.description}}</td>
+                    <td id="habilidades-row">
+                        <i *ngFor="let skill of portfolio.habilidad" class="{{skill.imagen}}"></i>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning" routerLink="/portfolio/update/{{portfolio.id}}">Modificar</button>
+                        <button class="btn btn-danger" *ngIf="admin" (click)="borrar(portfolio.id)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+            <button class="btn btn-success" *ngIf="admin" routerLink="/portfolio/create">Agregar</button>
+            <button class="btn btn-primary" routerLink="/portafolio">Volver</button>
+
+        </table>
+
+    </div>
+</div>

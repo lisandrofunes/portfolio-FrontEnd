@@ -1,12 +1,18 @@
 <section class="section_main">
-    <div class="container">
+    <div class="container" *ngFor="let person of persona">
+
         <div class="presentation">
-            <h1>{{'main.hi' | translate }}</h1>
-            <h2>{{'main.im' | translate }}</h2>
-            <h3>{{'main.dev' | translate }}</h3>
+            
+            <h1>{{person.saludo}}</h1>
+            <h2>Soy {{person.nombre}}</h2>
+            <h3>{{person.dedicacion}}</h3>
+            <div>
+                <button class="btn btn-warning" *ngIf="admin" routerLink="/persona/update/{{person.id}}">Modificar</button>
+            </div>
         </div>
-        <div class="picture">
-            <img class="img-fluid pic" src="" alt=""> 
+        <div class="picture" *ngFor="let fileHandle of person.dataImage">
+            <!-- <div class="blob"></div> -->
+            <img class="img-fluid pic" [src]="fileHandle.url" alt=""> 
         </div>
     </div>
 </section>

@@ -1,0 +1,34 @@
+<section id="skills" class="section-skills">
+
+  <div class="container">
+
+    <div class="title_skills">
+      <h3>Habilidades</h3>
+    </div>
+
+    <div>
+      <button class="btn btn-warning" *ngIf="admin" [routerLink]="['/habilidad']">Modificar</button>
+    </div>
+
+    <div class="card-container">
+
+      <div *ngFor="let skill of lista" class="item">
+
+        <div class="item-card">
+          <div class="content">
+            <div class="item-image">
+              <i class="{{skill.imagen}}"></i>
+            </div>
+            <div class="description-card">
+              <p class="title-card"><strong>{{skill.nombre}}</strong></p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

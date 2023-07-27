@@ -1,0 +1,45 @@
+$base-color: var(--main) !important;
+.multiselect-dropdown {
+  .dropdown-btn {
+    border: none !important;
+  }
+}
+
+.dropdown-list {
+  border: 2px solid var(--main) !important;
+  border-radius: 0 0 15px 15px !important;
+  background: var(--background1) !important;
+  margin-top: 7px !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.multiselect-item-checkbox input[type='checkbox']:focus + div:before,
+.multiselect-item-checkbox input[type='checkbox']:hover + div:before {
+  border-color: $base-color;
+  background-color: var(--main) !important;
+}
+
+.multiselect-item-checkbox input[type='checkbox'] + div {
+  color: var(--text) !important;
+}
+
+.multiselect-item-checkbox input[type='checkbox'] + div:after {
+  background-color: $base-color !important;
+}
+
+.item1 li:hover,
+.item2 li:hover{
+  background-color: var(--color3) !important;
+}
+
+.multiselect-item-checkbox
+  input[type='checkbox']:disabled:checked
+  + div:before {
+  background-color: var(--main) !important;
+}
+
+.multiselect-item-checkbox input[type='checkbox']:checked + div:before {
+  background: var(--main) !important;
+}
+

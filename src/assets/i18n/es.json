@@ -2,6 +2,7 @@
     "navbar":{
         "home": "Inicio",
         "about": "Sobre mí",
+        "skills": "Habilidades",
         "portfolio": "Portafolio",
         "contact": "Contacto"
     },
@@ -14,12 +15,14 @@
 
     "about":{
         "title": "Sobre mí",
-        "p1": "Mi nombre es Lisandro Funes.",
-        "p2": "Soy un desarrollador y estudiante universitario de Ingeniería en Sistemas de Información.",
-        "p3": "Disfruto escribiendo código para crear nuevos proyectos y brindar soluciones. Me gusta superarme para seguir creciendo e incorporando nuevas habilidades.",
-        "p4": "Mi interés por el desarrollo comenzó cuando navegaba por internet y me pareció interesante poder cambiar la apariencia de una página web, como el color, el texto y las imágenes. Entonces, investigué cómo era posible y comencé a modificar las páginas a través de las herramientas de desarrollo incluidas en los navegadores web.",
-        "p5": "Después, comencé a estudiar Ingeniería en Sistemas de Información, donde aprendí lenguajes de desarrollo como Java y Python, y comencé a desarrollar aplicaciones de software, al mismo tiempo, aprendí a crear soluciones de una manera más óptima siguiendo patrones de desarrollo. También aprendí sobre tecnologías de redes y comunicaciones, bases de datos, sistemas operativos y arquitectura de computadoras.",
-        "p6": "Día a día sigo aprendiendo sobre Java, JavaScript, TypeScript, BootStrap, SpringBoot y Angular para aplicar en nuevos proyectos."
+        "p1": "Mi nombre es Lisandro Funes, soy un desarrollador web y estudiante universitario de Ingeniería en Sistemas de Información.",
+        "p2": "Mi interés por el desarrollo comenzó cuando descubrí como cambiar el aspectos de las páginas web a través de las opciones de desarrollador incluida en los navegadores. Era algo totalmente nuevo para mí, y me resulto interesante aprender a desarrollar sitios web por mí mismo.",
+        "p3": "Comencé con tutoriales y cursos online para capacitarme y llevar a la práctica lo aprendido. También, comencé a estudiar Ingeniería en Sistemas de Información, donde aprendí sobre la programación orientada a objetos, lenguaje unificado de modelado (UML) y la aplicación de patrones de desarrollo. También, aprendí sobre tecnologías de redes y comunicaciones, bases de datos, sistemas operativos y arquitectura de computadoras.",
+        "p4": "Disfruto desarrollando nuevos proyectos para brindar soluciones y continuar adquiriendo nuevas habilidades en HTML, CSS, JavaScript, Angular, TypeScript y BootStrap."
+    },
+
+    "skills":{
+        "title": "Habilidades"
     },
 
     "portfolio":{

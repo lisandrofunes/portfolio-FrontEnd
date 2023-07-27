@@ -4,18 +4,22 @@
 
       <div class="title_contact"><h3>{{'contact.title' | translate }}</h3></div>
 
-      <form action="https://formspree.io/f/mzbwopea" method="POST" class="form">
+      <form (ngSubmit)="sendEmail()" class="form">
 
-        <input type="text" name="name" class="form-control" placeholder="{{'contact.name' | translate }}">
+        <input type="text" name="name" class="form-control" placeholder="{{'contact.name' | translate }}" autocomplete="given-name"
+          [(ngModel)]="nombre">
         
-        <input type="email" name="email" class="form-control" placeholder="{{'contact.email' | translate }}" aria-describedby="emailHelp">
+        <input type="email" name="email" class="form-control" placeholder="{{'contact.email' | translate }}" aria-describedby="emailHelp"
+          [(ngModel)]="email">
         <div id="emailHelp" class="form-text">{{'contact.alert' | translate }}</div>
         
-        <input type="text" name="subject" class="form-control" placeholder="{{'contact.subject' | translate }}">
+        <input type="text" name="subject" class="form-control" placeholder="{{'contact.subject' | translate }}" autocomplete="off"
+          [(ngModel)]="subject">
         
-        <textarea name="message" class="form-control message" placeholder="{{'contact.message' | translate }}" rows="4"></textarea>
+        <textarea name="message" class="form-control message" placeholder="{{'contact.message' | translate }}" rows="4"
+          [(ngModel)]="text"></textarea>
 
-        <button type="submit" class="btn btn-primary">{{'contact.buttom' | translate }}</button>
+        <button type="submit" class="send-btn">{{'contact.buttom' | translate }}</button>
       </form>
             
     </div>

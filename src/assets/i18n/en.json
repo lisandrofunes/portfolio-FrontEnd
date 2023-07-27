@@ -2,6 +2,7 @@
     "navbar":{
         "home": "Home",
         "about": "About",
+        "skills": "Skills",
         "portfolio": "Portfolio",
         "contact": "Contact"
     },
@@ -14,12 +15,14 @@
 
     "about":{
         "title": "About me",
-        "p1": "Hey there, my name is Lisandro Funes.",
-        "p2": "I'm a developer and university student of engineering in information systems.",
-        "p3": "I enjoy writing code to create new projects and provide solutions. I like to improve myself to continue growing and incorporating new skills.",
-        "p4": "My interest in development began when I was surfing the Internet and I found it interesting to be able to change the appearance of a web page, such as color, text and images. So, I looked into how this was possible and started modifying the pages through the development tools included in web browsers.",
-        "p5": "Then I started studying information systems engineering, where I learned development languages like Java and Python and started developing software applications, at the same time, I learned to create solutions in a more optimal way following development patterns. I also learned about network and communications technologies, databases, operating systems, and computer architecture.",
-        "p6": "Day by day I keep learning about Java, JavaScript, TypeScript, BootStrap, SpringBoot and Angular to apply in new projects."
+        "p1": "My name is Lisandro Funes, I am a web developer and Information Systems Engineering university student.",
+        "p2": "My interest in development began when I discovered how to change the appearance of web pages through the developer options included in browsers. It was something totally new for me, and I found it interesting to learn how to develop websites myself.",
+        "p3": "I started with tutorials and online courses to train myself and put what I learned into practice. I also started studying Information Systems Engineering, where I learned about object-oriented programming, Unified Modeling Language (UML) and the application of development patterns. I also learned about network and communication technologies, databases, operating systems, and computer architecture.",
+        "p4": "I enjoy developing new projects to provide solutions and continue to learn new skills in HTML, CSS, JavaScript, Angular, TypeScript, and BootStrap."
+    },
+
+    "skills":{
+        "title": "Skills"
     },
 
     "portfolio":{

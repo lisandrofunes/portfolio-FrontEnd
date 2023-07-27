@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<!-- <form (ngSubmit)="agregarHabilidad()">
+    <div class="mb-3">
+      <label for="nombreHabilidad" class="form-label">Nombre de la Habilidad</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Direccion de la Imagen</label>
+      <input type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="agregarHabilidad()">Agregar</button>
+  </form> -->
+
+<div class="container-bg">
+    <div class="container">
+        <h2 class="title_addSkill">Añadir Habilidad</h2>
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="agregarHabilidad()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreHabilidad">Nombre de la habilidad</label>
+                        <input type="text" class="form-control" id="nombreHabilidad" name="nombreHabilidad"
+                            [(ngModel)]="nombreHabilidad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenHabilidad">Direccion de la imagen</label>
+                        <input type="text" class="form-control" id="imagenHabilidad" name="imagenHabilidad"
+                            [(ngModel)]="imagenHabilidad" required>
+                    </div>
+                    <button class="btn btn-success btn-block" [disabled]="!f.valid">
+                        <i class="fas fa-plus-circle"></i> Crear</button>
+                    <button class="btn btn-primary btn-block" routerLink="/habilidad">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<ngx-ui-loader></ngx-ui-loader>

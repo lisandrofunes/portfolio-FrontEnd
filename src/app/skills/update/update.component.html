@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container-bg">
+    <div class="container" *ngIf="skill">
+        <h2 class="title_skills">Editar Habilidades</h2>
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreHabilidad">Nombre</label>
+                        <input type="text" class="form-control" id="nombreHabilidad" name="nombreHabilidad"
+                            [(ngModel)]="skill.nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenHabilidad">Imagen</label>
+                        <input type="text" class="form-control" id="imagenHabilidad" name="imagenHabilidad"
+                            [(ngModel)]="skill.imagen" required>
+                    </div>
+                    <button class="btn btn-success btn-block" [disabled]="!f.valid">
+                        <i class="fas fa-pencil-alt"></i> Actualizar</button>
+                    <button class="btn btn-primary btn-block" routerLink="/habilidad">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

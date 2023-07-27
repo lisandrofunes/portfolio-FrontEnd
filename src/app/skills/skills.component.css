@@ -1,0 +1,174 @@
+.section-skills {
+    padding: 4em 0;
+    background-color: var(--background1);
+    /* background: rgb(45,163,121);
+    background: linear-gradient(135deg, rgba(45,163,121,1) 33%, rgba(25,25,25,1) 33%, rgba(25,25,25,1) 66%, rgba(45,163,121,1) 66%); */
+    /* background-color: var(--background1);
+    padding: 4em 0;
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cg stroke-width='1' stroke-linejoin='bevel'%3E%3Cpath d='M479 270L479 0L0 0Z' fill='%23191919' stroke='%23191919'%3E%3C/path%3E%3Cpath d='M0 0L0 270L479 270Z' fill='%23233630' stroke='%23233630'%3E%3C/path%3E%3Cpath d='M0 270L0 540L479 270Z' fill='%23296c59' stroke='%23296c59'%3E%3C/path%3E%3Cpath d='M479 270L960 269L479 0Z' fill='%23191919' stroke='%23191919'%3E%3C/path%3E%3Cpath d='M0 540L480 540L479 270Z' fill='%23296c59' stroke='%23296c59'%3E%3C/path%3E%3Cpath d='M480 540L960 269L479 270Z' fill='%23296c59' stroke='%23296c59'%3E%3C/path%3E%3Cpath d='M960 269L960 0L479 0Z' fill='%23297762' stroke='%23297762'%3E%3C/path%3E%3Cpath d='M480 540L960 540L960 269Z' fill='%23202c28' stroke='%23202c28'%3E%3C/path%3E%3C/g%3E%3C/svg%3E"); */
+}
+
+.title_skills {
+    color: var(--color2);
+    padding: 0;
+    margin-bottom: .5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item-card {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 140px;
+    border-radius: 20px;
+    margin: 1em 1em;
+    box-shadow: 6px 6px 12px var(--shadow2), -6px -6px 12px var(--shadow1);
+    transition: .4s;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    background-color: var(--background1);
+    position: relative;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 115px;
+    height: 135px;
+    border-radius: 20px;
+}
+
+/*  */
+
+
+
+.item-card::before {
+    opacity: 0;
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 180px;
+    background: linear-gradient(90deg, transparent, var(--main2), var(--main2), transparent);
+
+    animation: rotation_9018 3000ms infinite linear;
+    animation-play-state: paused;
+    transition: .4s;
+}
+
+.item:hover .item-card::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+.item:hover .item-card{
+    transform: scale(1.15);
+    transition: .4s;
+}
+
+@keyframes rotation_9018 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*  */
+
+/* .item-card:before{
+    position: absolute;
+    content: '';
+    right: 100%;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    background-image: var(--before-wave);
+    background-size: cover;
+    transition: .3s;
+    z-index: -2;
+}
+
+.item:hover .item-card::before{
+    right: 10px;
+    top: 10px;
+    transition-delay: 50ms;
+    transition-duration: .4s;
+    z-index: -1;
+}
+
+.item-card:after{
+    position: absolute;
+    content: '';
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--after-wave);
+    background-size: cover;
+    transition: .1s;
+    z-index: -2;
+}
+
+.item:hover .item-card::after{
+    right: 10px;
+    top: 10px;
+    transition-delay: .2s;
+    transition-duration: .2s;
+    z-index: -2;
+
+}
+
+.item:hover .item-card{
+    transform: scale(1.15);
+    transition: .4s;
+    background-color: var(--color4);
+}
+
+.item:hover .item-image,
+.item:hover .title-card{
+    color: white;
+    transition: .3s;
+} */
+
+
+.item-image {
+    color: var(--text);
+    font-size: 50px;
+    transition: .3s;
+}
+
+.description-card {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.title-card {
+    color: var(--text);
+    transition: .3s;
+    margin: 0;
+    text-align: center;
+}

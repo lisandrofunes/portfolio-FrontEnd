@@ -1,0 +1,46 @@
+.container-bg{
+    background-color: var(--background1);
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 0;
+}
+
+.table{
+    /* width: 70%; */
+}
+
+.title_skills {
+    color: var(--color2);
+    padding: 0;
+    margin-bottom: .5em;
+}
+
+.btn-warning{
+    margin-right: 1em;
+}
+
+.btn-success, .btn-primary{
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+table{
+    table-layout: fixed;
+    vertical-align: middle;
+  }
+
+
+#habilidades-row i{
+    font-size: 1.5em;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+}
+
+#descripcion-column{
+    width: 450px;
+}

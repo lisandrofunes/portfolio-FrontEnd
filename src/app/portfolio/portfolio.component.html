@@ -1,60 +1,61 @@
-<div id="portfolio" class="container-bg"> 
+<div id="portfolio" class="container-bg">
   <div class="container">
-      <div class="title"><h3>{{'portfolio.title' | translate }}</h3></div>
-      <button class="pre-btn" (click)="scrollL()"><img src="https://api.iconify.design/material-symbols:arrow-back.svg?color=%23ffffff" alt=""></button>
-      <button class="nxt-btn" (click)="scrollR()"><img src="https://api.iconify.design/material-symbols:arrow-back.svg?color=%23ffffff" alt=""></button>
-  
-      <div id="product-container" class="portfolio-container">
-        
-        <div id="card_0" class="item-card">
-          <div class="item-image">
-            <img src="../../assets/portfolio_tecnobyte.png" class="portfolio-thumb" alt="">
-          </div>
-          <div class="description-card">
-            <h4 class="title-card"><strong>Tecnobyte</strong></h4>
-            <p class="description">{{'portfolio.card_0.description' | translate }}</p>
-            <div class="technology">
-              <i class="devicon-angularjs-plain"></i>
-              <i class="devicon-html5-plain"></i>
-              <i class="devicon-css3-plain"></i>
-              <i class="devicon-typescript-plain"></i>
-              <i class="devicon-bootstrap-plain"></i>
-            </div>
-            <a href="https://tecnobytebv.web.app/" target="_blank" class="visit-btn">{{'portfolio.visit' | translate }}</a>
-          </div>
-        </div> 
+    <div class="title">
+      <h3>{{'portfolio.title' | translate }}</h3>
+    </div>
+    <!-- <button class="pre-btn" (click)="scrollL()"><img src="https://api.iconify.design/material-symbols:arrow-back.svg?color=%23ffffff" alt=""></button>
+      <button class="nxt-btn" (click)="scrollR()"><img src="https://api.iconify.design/material-symbols:arrow-back.svg?color=%23ffffff" alt=""></button> -->
 
-        <div class="item-card">
-          <div class="item-image">
-            <img src="../../assets/portfolio_calculator.png" class="portfolio-thumb" alt="">
+    <div>
+      <button class="btn btn-warning" *ngIf="admin" [routerLink]="['/portfolio']">Modificar</button>
+    </div>
+
+    <div id="product-container" class="portfolio-container">
+
+      <div id="card_0" *ngFor="let portfolio of portfolioDetails" class="item-card">
+
+        <div *ngFor="let fileHandle of portfolio.dataImage" class="image-container">
+          <img [src]="fileHandle.url" class="item-image" alt="">
+        </div>
+
+        <div class="description-card">
+
+          <span class="title-card">
+            <h4><strong>{{portfolio.title}}</strong></h4>
+          </span>
+
+          <p class="description">{{portfolio.description}}</p>
+
+          <div class="technology">
+            <i *ngFor="let skill of portfolio.habilidad" class="{{skill.imagen}}"></i>
           </div>
-          <div class="description-card">
-            <h4 class="title-card"><strong>{{'portfolio.card_1.title-card' | translate }}</strong></h4>
-            <p class="description">{{'portfolio.card_1.description' | translate }}</p>
-            <div class="technology">
-              <i class="devicon-html5-plain"></i>
-              <i class="devicon-css3-plain"></i>
-              <i class="devicon-javascript-plain"></i>
-            </div>
-            <a href="https://lisandrofunes.github.io/calculadora/" target="_blank" class="visit-btn">{{'portfolio.visit' | translate }}</a>
-          </div>
-        </div> 
-      
-        <div class="item-card">
-          <div class="item-image">
-            <img src="../../assets/portfolio_qr-code.png" class="portfolio-thumb" alt="">
-          </div>
-          <div class="description-card">
-            <h4 class="title-card"><strong>{{'portfolio.card_2.title-card' | translate }}</strong></h4>
-            <p class="description">{{'portfolio.card_2.description' | translate }}</p>
-            <div class="technology">
-              <i class="devicon-html5-plain"></i>
-              <i class="devicon-css3-plain"></i>
-              <i class="devicon-javascript-plain"></i>
-            </div>
-            <a href="https://lisandrofunes.github.io/qrcode/" target="_blank" class="visit-btn">{{'portfolio.visit' | translate }}</a>
-          </div>
-        </div> 
+
+          <a href="{{portfolio.url}}" target="_blank" class="visit-btn">{{'portfolio.visit' | translate}}</a>
+        
+        </div>
       </div>
+
+      <!--  -->
+
+      <!--  -->
+
+
+      <!-- <div class="item-card">
+        <div class="item-image">
+          <img src="../../assets/portfolio_qr-code.png" class="image-container" alt="">
+        </div>
+        <div class="description-card">
+          <h4 class="title-card"><strong>{{'portfolio.card_2.title-card' | translate }}</strong></h4>
+          <p class="description">{{'portfolio.card_2.description' | translate }}</p>
+          <div class="technology">
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+          </div>
+          <a href="https://lisandrofunes.github.io/qrcode/" target="_blank" class="visit-btn">{{'portfolio.visit' |
+            translate }}</a>
+        </div>
+      </div> -->
+    </div>
   </div>
 </div>
